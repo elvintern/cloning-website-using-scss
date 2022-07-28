@@ -1,2 +1,2 @@
-# clonning-website-using-sass
+# cloning-website-using-sass
 I'm going to practice using SASS here :)

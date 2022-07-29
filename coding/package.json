@@ -1,0 +1,16 @@
+{
+  "name": "coding",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch-sass": "sass --watch resources/sass/main.scss resources/css/style.css",
+    "compile-sass": "sass --watch resources/sass/main.scss resources/css/style.css"
+  },
+  "author": "jinwoo park",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.54.0"
+  }
+}

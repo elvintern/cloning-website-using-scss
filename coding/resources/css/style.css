@@ -1,0 +1,18 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font: 1.6rem "Lato", sans-serif;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,14 @@
+// I made this mixin just for practice!
+@mixin link-transition($speed: 0.2s) {
+  transition: $speed linear;
+}
+
+@mixin flex-gab($gap: 3rem) {
+  display: flex;
+  gap: $gap;
+}
+
+@mixin text-gab($word: 1rem, $letter: 1rem) {
+  word-spacing: $word;
+  letter-spacing: $letter;
+}

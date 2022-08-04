@@ -30,6 +30,35 @@ body {
   @include m.text-gab;
 }
 
+.heading-secondary {
+  font-size: 3.2rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 7rem;
+
+  &__blue-bg {
+    @include m.blue-polygon;
+  }
+}
+
+.paragraph {
+  color: v.$color-grey-light;
+}
+
+.container {
+  @include m.flex-gab;
+  &--whyus {
+    margin-top: 7rem;
+    justify-content: space-between;
+  }
+
+  &--inventory {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+}
+
 // ********************************************************************
 // header Style
 // ********************************************************************
@@ -37,6 +66,7 @@ body {
   position: relative;
   height: 100vh;
   overflow: hidden;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 92%, 50% 100%, 0% 92%);
 
   &__bg-img {
     position: absolute;
@@ -150,5 +180,140 @@ body {
 
   &__price {
     font-size: 3rem;
+  }
+}
+
+// ********************************************************************
+// Section-whyus Style
+// ********************************************************************
+.section-whyus {
+  background-color: v.$color-white;
+  padding: v.$padding-section;
+}
+
+.feature {
+  flex-basis: 15%;
+  text-align: center;
+
+  &__icon {
+    font-size: 4rem;
+    color: v.$color-yellow;
+    display: inline-block;
+    background-color: v.$color-grey;
+    width: 7rem;
+    height: 7rem;
+    line-height: 1.7;
+    border-radius: 3.5rem;
+  }
+
+  &__name {
+    font-size: 1.9rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 2rem 0;
+  }
+
+  &__blue-hr {
+    border: none;
+    width: 50%;
+    height: 5px;
+    background-color: v.$color-skyblue;
+    margin: 0 auto 2rem;
+  }
+}
+
+// ********************************************************************
+// Section-inventory Style
+// ********************************************************************
+.section-inventory {
+  background-color: v.$color-grey-light-2;
+  padding: v.$padding-section;
+}
+
+.categories {
+  text-transform: uppercase;
+  float: right;
+  list-style: none;
+  margin-bottom: 6rem;
+  @include m.flex-gab(1rem);
+}
+
+.btn {
+  @include m.btn-style;
+
+  &--inventory {
+    padding: 0.5rem 1rem;
+    border: solid 1px v.$color-grey;
+    border-radius: 5px;
+    @include m.link-transition;
+
+    &:hover {
+      background-color: v.$color-grey;
+      color: v.$color-white;
+    }
+  }
+}
+
+.inventory {
+  font-size: 1.8rem;
+
+  &-item {
+    flex: 1 1 30%;
+    list-style: none;
+
+    &__link {
+      @include m.link-transition;
+
+      &:hover {
+        filter: brightness(110%);
+      }
+    }
+
+    &__img {
+      display: block;
+      width: 100%;
+      height: 25rem;
+      object-fit: cover;
+    }
+
+    &__details {
+      padding: 2rem;
+      justify-content: space-between;
+      text-transform: uppercase;
+      align-items: center;
+      background-color: v.$color-white;
+      @include m.flex-gab;
+    }
+
+    &__detail {
+      flex-direction: column;
+    }
+    &__maker {
+      font-weight: 800;
+      margin-bottom: 1rem;
+    }
+
+    &__price {
+      @include m.link-transition;
+      @include m.blue-polygon(0.5rem, 0.5rem);
+
+      &:hover {
+        clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+      }
+    }
+
+    &__sorts {
+      background-color: v.$color-white-dark-2;
+      padding: 2rem;
+      list-style: none;
+      justify-content: space-between;
+      @include m.flex-gab;
+    }
+
+    &__sort {
+      &-icon {
+        margin-right: 0.7rem;
+      }
+    }
   }
 }

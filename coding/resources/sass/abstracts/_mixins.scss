@@ -1,3 +1,5 @@
+@use "variables" as v;
+
 // I made this mixin just for practice!
 @mixin link-transition($speed: 0.2s) {
   transition: $speed linear;
@@ -11,4 +13,25 @@
 @mixin text-gab($word: 1rem, $letter: 1rem) {
   word-spacing: $word;
   letter-spacing: $letter;
+}
+
+@mixin btn-style {
+  color: v.$color-grey;
+  text-decoration: none;
+}
+
+@mixin blue-polygon(
+  $padding-tb: 1.5rem,
+  $padding-lr: 2.5rem,
+  $polygon: (
+    7% 0%,
+    100% 0%,
+    93% 100%,
+    0% 100%,
+  )
+) {
+  color: v.$color-white;
+  background-color: v.$color-skyblue;
+  padding: 1.5rem 2.5rem;
+  clip-path: polygon(7% 0%, 100% 0%, 93% 100%, 0% 100%);
 }

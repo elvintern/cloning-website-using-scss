@@ -5,12 +5,12 @@
   transition: $speed linear;
 }
 
-@mixin flex-gab($gap: 3rem) {
+@mixin flex-gap($gap: 3rem) {
   display: flex;
   gap: $gap;
 }
 
-@mixin text-gab($word: 1rem, $letter: 1rem) {
+@mixin text-gap($word: 1rem, $letter: 1rem) {
   word-spacing: $word;
   letter-spacing: $letter;
 }

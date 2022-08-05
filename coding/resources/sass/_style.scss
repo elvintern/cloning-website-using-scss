@@ -27,7 +27,7 @@ body {
 .heading-primary {
   font-size: 4.2rem;
   margin: 1rem 0;
-  @include m.text-gab;
+  @include m.text-gap;
 }
 
 .heading-secondary {
@@ -42,12 +42,19 @@ body {
   }
 }
 
+.heading-tertiary {
+  padding: 0.2rem;
+  font-size: 2.3rem;
+  text-transform: capitalize;
+  color: v.$color-black-light;
+}
+
 .paragraph {
   color: v.$color-grey-light;
 }
 
 .container {
-  @include m.flex-gab;
+  @include m.flex-gap;
   &--whyus {
     margin-top: 7rem;
     justify-content: space-between;
@@ -56,6 +63,22 @@ body {
   &--inventory {
     width: 100%;
     flex-wrap: wrap;
+  }
+}
+
+.btn {
+  @include m.btn-style;
+
+  &--inventory {
+    padding: 0.5rem 1rem;
+    border: solid 1px v.$color-grey;
+    border-radius: 5px;
+    @include m.link-transition;
+
+    &:hover {
+      background-color: v.$color-grey;
+      color: v.$color-white;
+    }
   }
 }
 
@@ -124,7 +147,7 @@ body {
 
   &__list {
     list-style: none;
-    @include m.flex-gab;
+    @include m.flex-gap;
   }
 
   &__link {
@@ -158,7 +181,7 @@ body {
   color: v.$color-white;
   text-align: right;
   text-transform: uppercase;
-  @include m.text-gab;
+  @include m.text-gap;
 
   &__new-sign {
     float: right;
@@ -235,23 +258,7 @@ body {
   float: right;
   list-style: none;
   margin-bottom: 6rem;
-  @include m.flex-gab(1rem);
-}
-
-.btn {
-  @include m.btn-style;
-
-  &--inventory {
-    padding: 0.5rem 1rem;
-    border: solid 1px v.$color-grey;
-    border-radius: 5px;
-    @include m.link-transition;
-
-    &:hover {
-      background-color: v.$color-grey;
-      color: v.$color-white;
-    }
-  }
+  @include m.flex-gap(1rem);
 }
 
 .inventory {
@@ -282,7 +289,7 @@ body {
       text-transform: uppercase;
       align-items: center;
       background-color: v.$color-white;
-      @include m.flex-gab;
+      @include m.flex-gap;
     }
 
     &__detail {
@@ -307,7 +314,7 @@ body {
       padding: 2rem;
       list-style: none;
       justify-content: space-between;
-      @include m.flex-gab;
+      @include m.flex-gap;
     }
 
     &__sort {
@@ -315,5 +322,137 @@ body {
         margin-right: 0.7rem;
       }
     }
+  }
+}
+
+// ********************************************************************
+// Section-banner Style
+// ********************************************************************
+.section-banner {
+  background: url(../img/ad.jpg) center/cover fixed;
+  padding: 3% 15%;
+}
+
+.banner {
+  display: flex;
+  align-items: center;
+
+  &__box {
+    padding: 3rem;
+    @include m.flex-gap;
+
+    &--left {
+      background-color: rgba(v.$color-yellow, 0.7);
+    }
+
+    &--right {
+      background-color: rgba(v.$color-skyblue, 0.7);
+    }
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+  }
+
+  &__icon {
+    font-size: 6rem;
+    color: v.$color-skyblue;
+    @include m.link-transition(0.5s);
+
+    &:hover {
+      transform: translateY(-20px);
+    }
+
+    &::before {
+      display: inline-block;
+      text-decoration: none;
+    }
+  }
+
+  &__paragraph {
+    margin-top: 1rem;
+    color: v.$color-white;
+  }
+}
+
+// ********************************************************************
+// Section-featured Style
+// ********************************************************************
+.section-featured {
+  background-color: v.$color-grey-light-2;
+  padding: v.$padding-section;
+}
+
+.featured {
+  @include m.flex-gap;
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    flex: 1 1 50%;
+    list-style: none;
+  }
+
+  &__link {
+    display: inline-block;
+    text-decoration: none;
+    width: 100%;
+    padding: 2rem 1rem;
+    color: v.$color-grey;
+    font-size: 2rem;
+    border-radius: 10px;
+    background-color: v.$color-white-dark-2;
+    text-transform: capitalize;
+    @include m.link-transition(0.4s);
+
+    &:hover {
+      transform: scale(1.05);
+      background-color: v.$color-white;
+    }
+  }
+
+  &__icon {
+    color: v.$color-yellow;
+    margin-right: 1rem;
+    font-size: 2.5rem;
+  }
+
+  &__brand {
+    font-weight: 800;
+  }
+
+  &__img-box {
+    flex: 1 1 50%;
+    overflow: hidden;
+    position: relative;
+    background-color: v.$color-skyblue;
+
+    &:hover .featured__img {
+      opacity: 0.3;
+      transform: scale(1.3);
+    }
+
+    &:hover .featured__img-icon {
+      opacity: 1;
+    }
+  }
+
+  &__img-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 4rem;
+    opacity: 0;
+    @include m.link-transition(0.5s);
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    @include m.link-transition(0.5s);
   }
 }

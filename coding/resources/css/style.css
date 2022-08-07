@@ -393,4 +393,56 @@ body {
   transition: 0.5s linear;
 }
 
+.section-gallery {
+  padding: 5% 15%;
+}
+
+.gallery {
+  display: flex;
+  gap: 3rem;
+}
+.gallery__box-left {
+  flex: 1 1 50%;
+}
+.gallery__link {
+  position: relative;
+  display: inline-block;
+  background-color: transparent;
+  transition: 0.7s linear;
+}
+.gallery__link:hover {
+  background-color: rgba(230, 191, 33, 0.4);
+}
+.gallery__link::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  outline: solid 0.8rem #fff;
+  outline-offset: -3rem;
+  transform: scale(0);
+  transition: 0.7s linear;
+}
+.gallery__link:hover::before {
+  transform: scale(1);
+}
+.gallery__img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+.gallery__box-right {
+  flex: 1 1 50%;
+  flex-wrap: wrap;
+  display: flex;
+  gap: 3rem;
+}
+.gallery__box-right > * {
+  flex: 1 1 35%;
+}
+
 /*# sourceMappingURL=style.css.map */

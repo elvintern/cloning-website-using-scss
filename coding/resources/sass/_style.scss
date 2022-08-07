@@ -456,3 +456,65 @@ body {
     @include m.link-transition(0.5s);
   }
 }
+
+// ********************************************************************
+// Section-gallery Style
+// ********************************************************************
+.section-gallery {
+  padding: v.$padding-section;
+}
+
+.gallery {
+  @include m.flex-gap;
+
+  &__box-left {
+    flex: 1 1 50%;
+  }
+
+  &__link {
+    position: relative;
+    display: inline-block;
+    background-color: transparent;
+    @include m.link-transition(0.7s);
+
+    &:hover {
+      background-color: rgba(v.$color-yellow, 0.4);
+    }
+
+    &::before {
+      content: "";
+      width: 100%;
+      height: 100%;
+      position: absolute;
+
+      top: 0;
+      left: 0;
+      outline: solid 0.8rem v.$color-white;
+      outline-offset: -3rem;
+      transform: scale(0);
+      @include m.link-transition(0.7s);
+    }
+
+    &:hover::before {
+      transform: scale(1);
+    }
+  }
+
+  &__img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+  }
+
+  &__box-right {
+    flex: 1 1 50%;
+    flex-wrap: wrap;
+    @include m.flex-gap;
+
+    & > * {
+      flex: 1 1 35%;
+    }
+  }
+}

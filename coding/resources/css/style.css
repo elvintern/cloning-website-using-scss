@@ -445,4 +445,43 @@ body {
   flex: 1 1 35%;
 }
 
+.section-submit {
+  background: url(../img/form-bg.jpg) center/cover fixed;
+  padding: 5% 15%;
+}
+
+.form {
+  width: 50%;
+  margin: 0 auto;
+  flex-direction: column;
+}
+.form__input {
+  border: solid 1px #e6bf21;
+  border-radius: 3px;
+  background-color: transparent;
+  color: #e6bf21;
+}
+.form__input--email {
+  text-transform: capitalize;
+  padding: 2rem 1.5rem;
+  font-size: 2rem;
+}
+.form__input--email::placeholder {
+  color: #e6bf21;
+}
+.form__input--email:focus {
+  outline: solid 2px #6db8e9;
+}
+.form__input--btn {
+  padding: 0.7rem 0;
+  font-size: 1.7rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: 0.2s linear;
+}
+.form__input--btn:hover {
+  background-color: #e6bf21;
+  color: #222;
+}
+
 /*# sourceMappingURL=style.css.map */

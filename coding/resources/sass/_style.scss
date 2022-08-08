@@ -518,3 +518,51 @@ body {
     }
   }
 }
+
+// ********************************************************************
+// Section-submit Style
+// ********************************************************************
+.section-submit {
+  background: url(../img/form-bg.jpg) center/cover fixed;
+  padding: v.$padding-section;
+}
+
+.form {
+  width: 50%;
+  margin: 0 auto;
+  flex-direction: column;
+
+  &__input {
+    border: solid 1px v.$color-yellow;
+    border-radius: 3px;
+    background-color: transparent;
+    color: v.$color-yellow;
+
+    &--email {
+      text-transform: capitalize;
+      padding: 2rem 1.5rem;
+      font-size: 2rem;
+
+      &::placeholder {
+        color: v.$color-yellow;
+      }
+
+      &:focus {
+        outline: solid 2px v.$color-skyblue;
+      }
+    }
+
+    &--btn {
+      padding: 0.7rem 0;
+      font-size: 1.7rem;
+      text-transform: uppercase;
+      cursor: pointer;
+      @include m.link-transition;
+
+      &:hover {
+        background-color: v.$color-yellow;
+        color: v.$color-black;
+      }
+    }
+  }
+}

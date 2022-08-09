@@ -21,17 +21,13 @@
 }
 
 @mixin blue-polygon(
+  $color: v.$color-white,
   $padding-tb: 1.5rem,
   $padding-lr: 2.5rem,
-  $polygon: (
-    7% 0%,
-    100% 0%,
-    93% 100%,
-    0% 100%,
-  )
+  $polygon: polygon(7% 0%, 100% 0%, 93% 100%, 0% 100%)
 ) {
   color: v.$color-white;
   background-color: v.$color-skyblue;
-  padding: 1.5rem 2.5rem;
-  clip-path: polygon(7% 0%, 100% 0%, 93% 100%, 0% 100%);
+  padding: $padding-tb $padding-lr;
+  clip-path: $polygon;
 }

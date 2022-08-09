@@ -49,6 +49,12 @@ body {
   color: v.$color-black-light;
 }
 
+.heading-quaternary {
+  font-size: 2.7rem;
+  text-transform: uppercase;
+  @include m.link-transition(0.5s);
+}
+
 .paragraph {
   color: v.$color-grey-light;
 }
@@ -63,6 +69,18 @@ body {
   &--inventory {
     width: 100%;
     flex-wrap: wrap;
+  }
+
+  &--service {
+    position: relative;
+    z-index: 3;
+    flex-wrap: wrap;
+    justify-content: center;
+    @include m.blue-polygon(
+      $padding-lr: 5%,
+      $padding-tb: 10%,
+      $polygon: polygon(0% 10%, 100% 0%, 100% 90%, 0% 100%)
+    );
   }
 }
 
@@ -564,5 +582,65 @@ body {
         color: v.$color-black;
       }
     }
+  }
+}
+
+// ********************************************************************
+// Section-submit Style
+// ********************************************************************
+.section-service {
+  padding: 7% 2%;
+
+  &__video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    object-fit: cover;
+  }
+
+  &__video-overlay {
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(v.$color-skyblue, 0.6);
+  }
+}
+
+.card-service {
+  flex-basis: 40%;
+  padding: 5rem 3rem;
+  background-color: v.$color-black-light;
+  @include m.link-transition(0.5s);
+
+  &__icon {
+    display: block;
+    color: v.$color-yellow;
+    font-size: 7rem;
+    @include m.link-transition(0.5s);
+  }
+
+  &__text {
+    text-transform: capitalize;
+    font-size: 2rem;
+    margin: 1rem 0;
+    @include m.link-transition(0.5s);
+  }
+
+  &:hover {
+    background-color: v.$color-white-dark;
+  }
+
+  &:hover > * {
+    transform: translateX(2%);
+  }
+
+  &:hover > *:not(.card-service__icon) {
+    color: v.$color-black;
   }
 }

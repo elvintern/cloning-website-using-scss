@@ -634,4 +634,24 @@ body {
   margin-top: 2rem;
 }
 
+.footer {
+  background-color: #777;
+  padding: 2% 0;
+  text-align: center;
+}
+.footer__logo-icon {
+  color: #222;
+  font-size: 5rem;
+  transition: 0.2s linear;
+}
+.footer__logo-icon:hover {
+  transform: scale(1.2);
+}
+.footer__copyright {
+  width: 25%;
+  margin: 0 auto;
+  padding-top: 1rem;
+  border-top: solid 2px #222;
+}
+
 /*# sourceMappingURL=style.css.map */

@@ -5,6 +5,12 @@
   transition: $speed linear;
 }
 
+@mixin logo-style {
+  color: v.$color-black;
+  font-size: 5rem;
+  transition: 0.2s linear;
+}
+
 @mixin flex-gap($gap: 3rem) {
   display: flex;
   gap: $gap;

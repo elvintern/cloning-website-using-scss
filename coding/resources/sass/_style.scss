@@ -153,9 +153,7 @@ body {
 
   &__logo {
     &-icon {
-      color: v.$color-black;
-      font-size: 5rem;
-      @include m.link-transition;
+      @include m.logo-style;
 
       &:hover {
         transform: scale(1.2);
@@ -739,5 +737,31 @@ body {
     color: v.$color-grey-light;
     font-size: 3rem;
     margin-top: 2rem;
+  }
+}
+
+// ********************************************************************
+// Footer Style
+// ********************************************************************
+.footer {
+  background-color: v.$color-grey-dark;
+  padding: v.$padding-footer;
+  text-align: center;
+
+  &__logo {
+    &-icon {
+      @include m.logo-style;
+
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+  }
+
+  &__copyright {
+    width: 25%;
+    margin: 0 auto;
+    padding-top: 1rem;
+    border-top: solid 2px v.$color-black;
   }
 }

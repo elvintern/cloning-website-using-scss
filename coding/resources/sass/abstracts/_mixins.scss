@@ -31,3 +31,13 @@
   padding: $padding-tb $padding-lr;
   clip-path: $polygon;
 }
+
+@mixin border-top {
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+
+@mixin border-bottom {
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+}

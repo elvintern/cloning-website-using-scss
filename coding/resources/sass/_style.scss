@@ -299,6 +299,7 @@ body {
       width: 100%;
       height: 25rem;
       object-fit: cover;
+      @include m.border-top;
     }
 
     &__details {
@@ -333,6 +334,7 @@ body {
       list-style: none;
       justify-content: space-between;
       @include m.flex-gap;
+      @include m.border-bottom;
     }
 
     &__sort {
@@ -354,17 +356,24 @@ body {
 .banner {
   display: flex;
   align-items: center;
+  border-radius: 3px;
 
   &__box {
     padding: 3rem;
     @include m.flex-gap;
 
     &--left {
+      flex-basis: 50%;
       background-color: rgba(v.$color-yellow, 0.7);
+      border-top-left-radius: 3px;
+      border-bottom-left-radius: 3px;
     }
 
     &--right {
+      flex-basis: 50%;
       background-color: rgba(v.$color-skyblue, 0.7);
+      border-top-right-radius: 3px;
+      border-bottom-right-radius: 3px;
     }
   }
 
@@ -471,6 +480,7 @@ body {
   &__img {
     width: 100%;
     height: 100%;
+    border-radius: 3px;
     @include m.link-transition(0.5s);
   }
 }
@@ -493,6 +503,7 @@ body {
     position: relative;
     display: inline-block;
     background-color: transparent;
+
     @include m.link-transition(0.7s);
 
     &:hover {
@@ -524,6 +535,7 @@ body {
     height: 100%;
     object-fit: cover;
     z-index: -1;
+    border-radius: 3px;
   }
 
   &__box-right {
@@ -616,6 +628,7 @@ body {
   flex-basis: 40%;
   padding: 5rem 3rem;
   background-color: v.$color-black-light;
+  border-radius: 3px;
   @include m.link-transition(0.5s);
 
   &__icon {
@@ -642,5 +655,89 @@ body {
 
   &:hover > *:not(.card-service__icon) {
     color: v.$color-black;
+  }
+}
+
+// ********************************************************************
+// Section-testimonial Style
+// ********************************************************************
+.section-testimonial {
+  padding: v.$padding-section;
+  padding-top: 0;
+}
+
+.testimonial {
+  flex-basis: 1 1 30%;
+  position: relative;
+  @include m.link-transition(0.5s);
+
+  &:hover {
+    transform: scale(1.1);
+  }
+
+  &__bg-img {
+    width: 100%;
+    height: 25rem;
+    @include m.border-top;
+
+    &--left {
+      background: url(/coding/resources/img/testimonial-bg1.jpg) center/cover;
+    }
+
+    &--middle {
+      background: url(/coding/resources/img/testimonial-bg2.jpg) center/cover;
+    }
+
+    &--right {
+      background: url(/coding/resources/img/testimonial-bg3.jpg) center/cover;
+    }
+  }
+
+  &__profile-img {
+    position: absolute;
+    top: 51%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 8rem;
+    height: 8rem;
+    border: solid 2px v.$color-grey;
+    border-radius: 4rem;
+
+    &--left {
+      background: url(/coding/resources/img/customer1.jpg) center/cover;
+    }
+
+    &--middle {
+      background: url(/coding/resources/img/customer2.jpg) center/cover;
+    }
+
+    &--right {
+      background: url(/coding/resources/img/customer3.jpg) center/cover;
+    }
+  }
+
+  &__profile-info {
+    text-align: center;
+    padding: 5rem 3.5rem 2rem;
+    color: v.$color-grey-light;
+    border: solid 2px v.$color-grey-light-2;
+    @include m.border-bottom;
+  }
+
+  &__name {
+    font-size: 2rem;
+    color: v.$color-skyblue;
+    text-transform: capitalize;
+  }
+
+  &__job {
+    text-transform: capitalize;
+    padding: 1rem 0;
+  }
+
+  &__icon {
+    color: v.$color-grey-light;
+    font-size: 3rem;
+    margin-top: 2rem;
   }
 }

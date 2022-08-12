@@ -67,7 +67,6 @@ body {
 }
 .container--service {
   position: relative;
-  z-index: 3;
   flex-wrap: wrap;
   justify-content: center;
   color: #fff;
@@ -123,6 +122,7 @@ body {
 }
 
 .nav {
+  z-index: 3;
   position: fixed;
   top: 0;
   left: 0;

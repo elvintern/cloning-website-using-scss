@@ -24,42 +24,47 @@
     <link rel="stylesheet" href="./resources/css/style.css" />
   </head>
   <body>
+    <nav class="nav">
+      <a class="nav__logo" href="#"
+        ><i class="nav__logo-icon fas fa-car"></i
+      ></a>
+      <ul class="nav__list nav__list--text">
+        <li class="nav__item"><a href="#" class="nav__link">home</a></li>
+        <li class="nav__item">
+          <a href="#skills" class="nav__link">skills</a>
+        </li>
+        <li class="nav__item">
+          <a href="#inventory" class="nav__link">inventory</a>
+        </li>
+        <li class="nav__item">
+          <a href="#features" class="nav__link">features</a>
+        </li>
+      </ul>
+      <ul class="nav__list nav__list--social">
+        <li class="nav__item">
+          <a href="#" class="nav__link">
+            <i class="nav__icon nav__icon--facebook fab fa-facebook-square"></i>
+          </a>
+        </li>
+        <li class="nav__item">
+          <a href="#" class="nav__link">
+            <i class="nav__icon nav__icon--twitter fab fa-twitter-square"></i>
+          </a>
+        </li>
+        <li class="nav__item">
+          <a href="#" class="nav__link">
+            <i class="nav__icon nav__icon--instagram fab fa-instagram"></i>
+          </a>
+        </li>
+      </ul>
+    </nav>
     <header class="header">
       <img
         class="header__bg-img"
         src="./resources/img/main.jpg"
         alt="a black car on a road"
       />
-      <nav class="nav">
-        <a class="nav__logo" href="#"
-          ><i class="nav__logo-icon fas fa-car"></i
-        ></a>
-        <ul class="nav__list nav__list--text">
-          <li class="nav__item"><a href="#" class="nav__link">home</a></li>
-          <li class="nav__item"><a href="#" class="nav__link">skills</a></li>
-          <li class="nav__item"><a href="#" class="nav__link">inventory</a></li>
-          <li class="nav__item"><a href="#" class="nav__link">features</a></li>
-        </ul>
-        <ul class="nav__list nav__list--social">
-          <li class="nav__item">
-            <a href="#" class="nav__link">
-              <i
-                class="nav__icon nav__icon--facebook fab fa-facebook-square"
-              ></i>
-            </a>
-          </li>
-          <li class="nav__item">
-            <a href="#" class="nav__link">
-              <i class="nav__icon nav__icon--twitter fab fa-twitter-square"></i>
-            </a>
-          </li>
-          <li class="nav__item">
-            <a href="#" class="nav__link">
-              <i class="nav__icon nav__icon--instagram fab fa-instagram"></i>
-            </a>
-          </li>
-        </ul>
-      </nav>
+
       <div class="hero-box">
         <p class="hero-box__new-sign">the all new</p>
         <h1 class="heading-primary">2022 lexus</h1>
@@ -70,7 +75,7 @@
     </header>
 
     <main class="main">
-      <section class="section-whyus">
+      <section id="skills" class="section-whyus">
         <h2 class="heading-secondary">
           why choose <span class="heading-secondary__blue-bg">car dealer</span>
         </h2>
@@ -114,7 +119,7 @@
         </div>
       </section>
 
-      <section class="section-inventory">
+      <section id="inventory" class="section-inventory">
         <h2 class="heading-secondary">
           our <span class="heading-secondary__blue-bg">inventory</span>
         </h2>
@@ -325,7 +330,7 @@
         </div>
       </section>
 
-      <section class="section-featured">
+      <section id="features" class="section-featured">
         <h2 class="heading-secondary">
           featured <span class="heading-secondary__blue-bg">cars</span>
         </h2>

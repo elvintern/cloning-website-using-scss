@@ -282,7 +282,7 @@ body {
 .inventory-item__price {
   transition: 0.2s linear;
   color: #fff;
-  background-color: 0.5rem;
+  background-color: #6db8e9;
   padding: 1.5rem 2.5rem;
   clip-path: polygon(7% 0%, 100% 0%, 93% 100%, 0% 100%);
 }
@@ -367,6 +367,7 @@ body {
   width: 100%;
   flex: 1 1 50%;
   list-style: none;
+  gap: 1rem;
 }
 .featured__link {
   display: inline-block;
@@ -670,7 +671,7 @@ body {
     font-size: 75%;
   }
   .featured__link {
-    padding: 2.8rem 1rem;
+    padding: 3rem 1rem;
   }
   .card-service {
     flex-basis: 26%;
@@ -682,9 +683,6 @@ body {
   html {
     font-size: 55%;
   }
-  .featured__link {
-    padding: 2rem 1rem;
-  }
   .card-service {
     padding: 4rem 3rem;
   }
@@ -693,6 +691,36 @@ body {
   }
 }
 /* Large Tablet to Laptop: 848px ~ 1323px */
+@media only screen and (max-width: 1323px) {
+  html {
+    font-size: 48%;
+  }
+  .heading-primary {
+    font-size: 3.8rem;
+  }
+  .heading-tertiary {
+    font-size: 2.2rem;
+  }
+  .section-inventory {
+    padding: 7% 10%;
+  }
+  .container--inventory {
+    gap: 2rem;
+  }
+  .inventory-item__details,
+.inventory-item__sorts {
+    gap: 1rem;
+  }
+  .section-banner {
+    padding: 7% 10%;
+  }
+  .featured__link {
+    padding: 1.5rem;
+  }
+  .section-testimonial {
+    padding: 7% 10%;
+  }
+}
 /* Large Phone to Tablet: 403px ~ 847px */
 /* Extra small phone to Phone: 0px ~ 402px*/
 /* *************************************** */

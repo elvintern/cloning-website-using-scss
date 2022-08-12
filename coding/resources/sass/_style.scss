@@ -320,7 +320,7 @@ body {
 
     &__price {
       @include m.link-transition;
-      @include m.blue-polygon(0.5rem, 0.5rem);
+      @include m.blue-polygon;
 
       &:hover {
         clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
@@ -420,6 +420,7 @@ body {
     width: 100%;
     flex: 1 1 50%;
     list-style: none;
+    gap: 1rem;
   }
 
   &__link {

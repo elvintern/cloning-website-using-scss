@@ -44,13 +44,13 @@ body {
 
 .heading-tertiary {
   padding: 0.2rem;
-  font-size: 2.3rem;
+  font-size: 2.7rem;
   text-transform: capitalize;
   color: v.$color-black-light;
 }
 
 .heading-quaternary {
-  font-size: 2.7rem;
+  font-size: 2.3rem;
   text-transform: uppercase;
   @include m.link-transition(0.5s);
 }
@@ -624,9 +624,15 @@ body {
   }
 }
 
+.cards {
+  width: 100%;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
 .card-service {
   flex-basis: 35%;
-  padding: 5rem 3rem;
+  padding: 6rem 3rem;
   background-color: v.$color-black-light;
   border-radius: 3px;
   @include m.link-transition(0.5s);

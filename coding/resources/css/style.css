@@ -38,13 +38,13 @@ body {
 
 .heading-tertiary {
   padding: 0.2rem;
-  font-size: 2.3rem;
+  font-size: 2.7rem;
   text-transform: capitalize;
   color: #333;
 }
 
 .heading-quaternary {
-  font-size: 2.7rem;
+  font-size: 2.3rem;
   text-transform: uppercase;
   transition: 0.5s linear;
 }
@@ -536,9 +536,15 @@ body {
   background-color: rgba(109, 184, 233, 0.6);
 }
 
+.cards {
+  width: 100%;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
 .card-service {
   flex-basis: 35%;
-  padding: 5rem 3rem;
+  padding: 6rem 3rem;
   background-color: #333;
   border-radius: 3px;
   transition: 0.5s linear;
@@ -672,6 +678,20 @@ body {
 }
 /* Default range */
 /* Large laptop to Desktop: 1324px ~ 1728px */
+@media only screen and (max-width: 1728px) {
+  html {
+    font-size: 55%;
+  }
+  .featured__link {
+    padding: 2rem 1rem;
+  }
+  .card-service {
+    padding: 4rem 3rem;
+  }
+  .card-service__icon {
+    font-size: 5rem;
+  }
+}
 /* Large Tablet to Laptop: 848px ~ 1323px */
 /* Large Phone to Tablet: 403px ~ 847px */
 /* Extra small phone to Phone: 0px ~ 402px*/

@@ -85,6 +85,17 @@
     font-size: 2.8rem;
   }
 
+  .container {
+    &--whyus {
+      flex-wrap: wrap;
+    }
+  }
+
+  .paragraph {
+    width: 70%;
+    margin: 0 auto;
+  }
+
   .nav__list {
     list-style: none;
     display: flex;
@@ -98,6 +109,10 @@
 
   .section-whyus {
     padding: 7% 10%;
+  }
+
+  .feature {
+    flex: 1 1 40%;
   }
 
   .banner__box {
@@ -153,6 +168,23 @@
 }
 
 /* Extra small phone to Phone: 0px ~ 402px*/
+@media only screen and (max-width: 402px) {
+  html {
+    font-size: 40%;
+  }
+
+  .container {
+    gap: 1.8rem;
+  }
+
+  .nav__list {
+    gap: 1rem;
+  }
+
+  .hero-box {
+    right: -12%;
+  }
+}
 
 /* *************************************** */
 /* Img Responsive Stlye */

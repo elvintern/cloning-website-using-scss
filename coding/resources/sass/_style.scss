@@ -349,7 +349,7 @@ body {
 // Section-banner Style
 // ********************************************************************
 .section-banner {
-  background: url(../img/ad.jpg) center/cover fixed;
+  background: url(../img/compressed/ad-min.jpg) center/cover fixed;
   padding: 3% 15%;
 }
 
@@ -554,7 +554,7 @@ body {
 // Section-submit Style
 // ********************************************************************
 .section-submit {
-  background: url(../img/form-bg.jpg) center/cover fixed;
+  background: url(../img/compressed/form-bg.jpg) center/cover fixed;
   padding: v.$padding-section;
   overflow: hidden;
 }
@@ -676,6 +676,7 @@ body {
 
 .testimonials {
   gap: 3rem;
+  justify-content: space-between;
   margin-bottom: 25rem;
 }
 
@@ -694,15 +695,18 @@ body {
     @include m.border-top;
 
     &--left {
-      background: url(/coding/resources/img/testimonial-bg1.jpg) center/cover;
+      background: url(/coding/resources/img/compressed/testimonial-bg1-min.jpg)
+        center/cover;
     }
 
     &--middle {
-      background: url(/coding/resources/img/testimonial-bg2.jpg) center/cover;
+      background: url(/coding/resources/img/compressed/testimonial-bg2-min.jpg)
+        center/cover;
     }
 
     &--right {
-      background: url(/coding/resources/img/testimonial-bg3.jpg) center/cover;
+      background: url(/coding/resources/img/compressed/testimonial-bg3-min.jpg)
+        center/cover;
     }
   }
 
@@ -717,15 +721,18 @@ body {
     border-radius: 4rem;
 
     &--left {
-      background: url(/coding/resources/img/customer1.jpg) center/cover;
+      background: url(/coding/resources/img/compressed/customer1-min.jpg)
+        center/cover;
     }
 
     &--middle {
-      background: url(/coding/resources/img/customer2.jpg) center/cover;
+      background: url(/coding/resources/img/compressed/customer2-min.jpg)
+        center/cover;
     }
 
     &--right {
-      background: url(/coding/resources/img/customer3.jpg) center/cover;
+      background: url(/coding/resources/img/compressed/customer3-min.jpg)
+        center/cover;
     }
   }
 

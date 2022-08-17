@@ -305,7 +305,7 @@ body {
 }
 
 .section-banner {
-  background: url(../img/ad.jpg) center/cover fixed;
+  background: url(../img/compressed/ad-min.jpg) center/cover fixed;
   padding: 3% 15%;
 }
 
@@ -477,7 +477,7 @@ body {
 }
 
 .section-submit {
-  background: url(../img/form-bg.jpg) center/cover fixed;
+  background: url(../img/compressed/form-bg.jpg) center/cover fixed;
   padding: 7% 15%;
   overflow: hidden;
 }
@@ -580,6 +580,7 @@ body {
 
 .testimonials {
   gap: 3rem;
+  justify-content: space-between;
   margin-bottom: 25rem;
 }
 
@@ -598,13 +599,13 @@ body {
   border-top-right-radius: 3px;
 }
 .testimonial__bg-img--left {
-  background: url(/coding/resources/img/testimonial-bg1.jpg) center/cover;
+  background: url(/coding/resources/img/compressed/testimonial-bg1-min.jpg) center/cover;
 }
 .testimonial__bg-img--middle {
-  background: url(/coding/resources/img/testimonial-bg2.jpg) center/cover;
+  background: url(/coding/resources/img/compressed/testimonial-bg2-min.jpg) center/cover;
 }
 .testimonial__bg-img--right {
-  background: url(/coding/resources/img/testimonial-bg3.jpg) center/cover;
+  background: url(/coding/resources/img/compressed/testimonial-bg3-min.jpg) center/cover;
 }
 .testimonial__profile-img {
   position: absolute;
@@ -617,13 +618,13 @@ body {
   border-radius: 4rem;
 }
 .testimonial__profile-img--left {
-  background: url(/coding/resources/img/customer1.jpg) center/cover;
+  background: url(/coding/resources/img/compressed/customer1-min.jpg) center/cover;
 }
 .testimonial__profile-img--middle {
-  background: url(/coding/resources/img/customer2.jpg) center/cover;
+  background: url(/coding/resources/img/compressed/customer2-min.jpg) center/cover;
 }
 .testimonial__profile-img--right {
-  background: url(/coding/resources/img/customer3.jpg) center/cover;
+  background: url(/coding/resources/img/compressed/customer3-min.jpg) center/cover;
 }
 .testimonial__profile-info {
   text-align: center;
@@ -816,5 +817,28 @@ body {
 /* *************************************** */
 /* Img Responsive Stlye */
 /* *************************************** */
+@media only screen and (min-resolution: 192dpi) and (min-width: 500px), (min-width: 1000px) {
+  .section-banner {
+    background: url(../img/compressed/ad.jpg) center/cover fixed;
+  }
+  .testimonial__bg-img--left {
+    background: url(/coding/resources/img/compressed/testimonial-bg1.jpg) center/cover;
+  }
+  .testimonial__bg-img--middle {
+    background: url(/coding/resources/img/compressed/testimonial-bg2.jpg) center/cover;
+  }
+  .testimonial__bg-img--right {
+    background: url(/coding/resources/img/compressed/testimonial-bg3.jpg) center/cover;
+  }
+  .testimonial__profile-img--left {
+    background: url(/coding/resources/img/compressed/customer1.jpg) center/cover;
+  }
+  .testimonial__profile-img--middle {
+    background: url(/coding/resources/img/compressed/customer2.jpg) center/cover;
+  }
+  .testimonial__profile-img--right {
+    background: url(/coding/resources/img/compressed/customer3.jpg) center/cover;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */

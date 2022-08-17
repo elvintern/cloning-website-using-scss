@@ -189,3 +189,45 @@
 /* *************************************** */
 /* Img Responsive Stlye */
 /* *************************************** */
+@media only screen and (min-resolution: 192dpi) and (min-width: 500px),
+  (min-width: 1000px) {
+  .section-banner {
+    background: url(../img/compressed/ad.jpg) center/cover fixed;
+  }
+
+  .testimonial {
+    &__bg-img {
+      &--left {
+        background: url(/coding/resources/img/compressed/testimonial-bg1.jpg)
+          center/cover;
+      }
+
+      &--middle {
+        background: url(/coding/resources/img/compressed/testimonial-bg2.jpg)
+          center/cover;
+      }
+
+      &--right {
+        background: url(/coding/resources/img/compressed/testimonial-bg3.jpg)
+          center/cover;
+      }
+    }
+
+    &__profile-img {
+      &--left {
+        background: url(/coding/resources/img/compressed/customer1.jpg)
+          center/cover;
+      }
+
+      &--middle {
+        background: url(/coding/resources/img/compressed/customer2.jpg)
+          center/cover;
+      }
+
+      &--right {
+        background: url(/coding/resources/img/compressed/customer3.jpg)
+          center/cover;
+      }
+    }
+  }
+}
